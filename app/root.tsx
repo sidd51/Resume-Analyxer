@@ -6,7 +6,6 @@ import {
   Scripts,
   ScrollRestoration,
 } from "react-router";
-
 import type { Route } from "./+types/root";
 import "./app.css";
 import { usePuterStore } from "./lib/puter";
@@ -26,12 +25,29 @@ export const links: Route.LinksFunction = () => [
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
+  const { init } = usePuterStore();
 
-  const { init } =usePuterStore();
+  useEffect(() => {
+    // Initialize Puter store
+    init();
 
-  useEffect(()=>{
-      init()
-  },[init])
+    // Dynamically load Puter script on client-side
+    if (typeof window !== "undefined") {
+      const script = document.createElement("script");
+      script.src = "https://js.puter.com/v2/";
+      script.async = true;
+      document.body.appendChild(script);
+
+      // Cleanup on unmount
+      return () => {
+        document.body.removeChild(script);
+      };
+    }
+
+    // Ensure the effect returns void if not in browser
+    return undefined;
+  }, [init]);
+
   return (
     <html lang="en">
       <head>
@@ -41,9 +57,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-
-         <script src="https://js.puter.com/v2/"></script>
-
         {children}
         <ScrollRestoration />
         <Scripts />
@@ -67,7 +80,7 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
       error.status === 404
         ? "The requested page could not be found."
         : error.statusText || details;
-  } else if (import.meta.env.DEV && error && error instanceof Error) {
+  } else if (import.meta.env.DEV && error instanceof Error) {
     details = error.message;
     stack = error.stack;
   }
