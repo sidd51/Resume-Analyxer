@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build",
+  "functions": {
+    "api/server.js": {
+      "runtime": "nodejs20.x",
+      "memory": 1024,
+      "maxDuration": 10
+    }
+  },
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/api/server.js" }
+  ]
+}
