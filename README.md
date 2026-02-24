@@ -101,7 +101,7 @@ src/
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/ai-resume-analyzer.git
+git clone https://github.com/sidd51/ai-resume-analyzer.git
 
 # Navigate to project folder
 cd ai-resume-analyzer
