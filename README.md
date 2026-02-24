@@ -1,87 +1,38 @@
-# Welcome to React Router!
+A modern web application that analyzes resumes using AI-powered feedback. Built with React, TypeScript, and Puter.js, this project allows users to upload their resumes (PDF), view AI-generated feedback, and manage their app data easily — all on the frontend.
 
-A modern, production-ready template for building full-stack React applications using React Router.
+🚀 Features
+🧾 Resume Upload (Form Uploader Page)
+Upload your resume in PDF format for instant analysis.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+🧠 AI Resume Feedback
+Automatically generates insightful feedback using AI to help improve your resume.
 
-## Features
+🖼️ PDF to Image Conversion
+Converts uploaded PDFs into images for better visual feedback and display.
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+🏠 Feedback Showcase on Home Screen
+Displays the collected AI feedback summaries directly on the home page.
 
-## Getting Started
+🧑‍💻 Authentication System (via Puter.js)
+Secure login and user session management handled with Puter.js.
 
-### Installation
+🧭 Responsive UI with Navigation, Hero Section & Resume Cards
+Beautifully designed frontend sections for a smooth and modern user experience.
 
-Install the dependencies:
+🧹 Wipe App Data Option
+Easily clear all stored data and reset the app by visiting /wipe.
 
-```bash
-npm install
-```
+🛠️ Tech Stack
+React is a popular open‑source JavaScript library for building user interfaces using reusable components and a virtual DOM, enabling efficient, dynamic single-page and native apps.
 
-### Development
+React Router v7 is the go‑to routing library for React apps, offering nested routes, data loaders/actions, error boundaries, code splitting, and SSR support—all with a smooth upgrade path from v6.
 
-Start the development server with HMR:
+Puter.com is an advanced, open-source internet operating system designed to be feature-rich, exceptionally fast, and highly extensible. Puter can be used as: A privacy-first personal cloud to keep all your files, apps, and games in one secure place, accessible from anywhere at any time.
 
-```bash
-npm run dev
-```
+Puter.js is a tiny client‑side SDK that adds serverless auth, storage, database, and AI (GPT, Claude, DALL·E, OCR…) straight into your browser app—no backend needed and costs borne by users.
 
-Your application will be available at `http://localhost:5173`.
+Tailwind CSS is a utility-first CSS framework that allows developers to design custom user interfaces by applying low-level utility classes directly in HTML, streamlining the design process.
 
-## Building for Production
+TypeScript is a superset of JavaScript that adds static typing, providing better tooling, code quality, and error detection for developers, making it ideal for building large-scale applications.
 
-Create a production build:
-
-```bash
-npm run build
-```
-
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
----
-
-Built with ❤️ using React Router.
+Zustand is a minimal, hook-based state management library for React. It lets you manage global state with zero boilerplate, no context providers, and excellent performance through selective state subscriptions
