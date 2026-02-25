@@ -1,5 +1,18 @@
 {
+  "buildCommand": "npm run build",
+  "outputDirectory": "build/client",
   "routes": [
-    { "src": "/(.*)", "dest": "/" }
+    {
+      "src": "^/assets/(.*)",
+      "dest": "/assets/$1"
+    },
+    {
+      "src": "^/(.*\\.(js|css|png|jpg|svg|ico))$",
+      "dest": "/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/"
+    }
   ]
 }
