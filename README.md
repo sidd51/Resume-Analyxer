@@ -1,87 +1,144 @@
-# Welcome to React Router!
+# 🧠 AI Resume Analyzer
 
-A modern, production-ready template for building full-stack React applications using React Router.
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
-
-## Features
-
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
-
-## Getting Started
-
-### Installation
-
-Install the dependencies:
-
-```bash
-npm install
-```
-
-### Development
-
-Start the development server with HMR:
-
-```bash
-npm run dev
-```
-
-Your application will be available at `http://localhost:5173`.
-
-## Building for Production
-
-Create a production build:
-
-```bash
-npm run build
-```
-
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+A modern, frontend-only web application that analyzes resumes using **AI-powered feedback**. Built with **React, TypeScript, and Puter.js**, this app allows users to upload resumes, receive intelligent suggestions, and manage their data — all without a traditional backend.
 
 ---
 
-Built with ❤️ using React Router.
+## 🚀 Features
+
+### 🧾 Resume Upload
+
+Upload your resume in **PDF format** through a simple and intuitive interface.
+
+### 🧠 AI-Powered Feedback
+
+Get **instant, actionable insights** to improve your resume using AI.
+
+### 🖼️ PDF to Image Conversion
+
+Automatically converts PDFs into images for better **visual display and analysis**.
+
+### 🏠 Feedback Dashboard
+
+View all AI-generated feedback summaries directly on the **home screen**.
+
+### 🧑‍💻 Authentication (Puter.js)
+
+Secure login and session management handled entirely on the **client-side**.
+
+### 🧭 Modern Responsive UI
+
+* Clean navigation
+* Hero section
+* Resume cards
+* Fully responsive design
+
+### 🧹 Wipe App Data
+
+Reset the app and clear stored data anytime via:
+
+```
+/wipe
+```
+
+---
+
+## 🛠️ Tech Stack
+
+### ⚛️ React
+
+A powerful JavaScript library for building dynamic user interfaces using reusable components.
+
+
+### ☁️ Puter.js
+
+A **serverless SDK** providing:
+
+* Authentication
+* File storage
+* Database
+* AI integration (GPT, OCR, etc.)
+
+👉 No backend required — everything runs in the browser!
+
+### 🎨 Tailwind CSS
+
+Utility-first CSS framework for building fast, responsive, and modern UIs.
+
+### 🔷 TypeScript
+
+Adds static typing to JavaScript for:
+
+* Better code quality
+* Fewer bugs
+* Improved developer experience
+
+### 🐻 Zustand
+
+Lightweight state management:
+
+* No boilerplate
+* High performance
+* Simple global state handling
+
+---
+
+## 📂 Project Structure
+
+```
+src/
+│── components/     # Reusable UI components
+│── pages/          # Application pages
+│── store/          # Zustand state management
+│── utils/          # Helper functions
+│── services/       # Puter.js integrations
+│── assets/         # Static assets
+```
+
+---
+
+## ⚙️ Installation & Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/sidd51/ai-resume-analyzer.git
+
+# Navigate to project folder
+cd ai-resume-analyzer
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+```
+
+---
+
+## 🔐 How It Works
+
+1. User logs in via **Puter.js authentication**
+2. Uploads a **PDF resume**
+3. App converts PDF → images
+4. AI analyzes content and generates feedback
+5. Feedback is stored and displayed on dashboard
+
+---
+
+## 🌟 Key Highlights
+
+* 💡 **No backend required**
+* ⚡ Fully **serverless architecture**
+* 🔒 Privacy-first approach (user-controlled data)
+* 🎯 Focused on **real-world usability**
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+If you like this project, feel free to ⭐ the repo and connect!
+
