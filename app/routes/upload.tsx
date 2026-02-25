@@ -94,7 +94,12 @@ const Upload = () => {
                         <h2>Drop your resume for an ATS score and improvement tips</h2>
                     )}
                     {!isProcessing && (
-                        <form id="upload-form" onSubmit={handleSubmit} className="flex flex-col gap-4 mt-8">
+                       <div className="w-full max-w-2xl bg-white border border-gray-200 rounded-2xl shadow-sm p-8 hover:shadow-md transition-all mt-8">
+                        <form
+                            id="upload-form"
+                            onSubmit={handleSubmit}
+                            className="flex flex-col gap-6"
+                        >
                             <div className="form-div">
                                 <label htmlFor="company-name">Company Name</label>
                                 <input type="text" name="company-name" placeholder="Company Name" id="company-name" />
@@ -113,10 +118,14 @@ const Upload = () => {
                                 <FileUploader onFileSelect={handleFileSelect} />
                             </div>
 
-                            <button className="primary-button" type="submit">
-                                Analyze Resume
+                            <button
+                            className="bg-black text-white rounded-xl py-3 font-medium hover:bg-gray-900 transition-all"
+                            type="submit"
+                            >
+                            Analyze Resume
                             </button>
                         </form>
+                        </div>
                     )}
                 </div>
             </section>
