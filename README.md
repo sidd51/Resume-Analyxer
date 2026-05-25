@@ -1,8 +1,10 @@
 # 🧠 AI Resume Analyzer
 
 A modern, frontend-only web application that analyzes resumes using **AI-powered feedback**. Built with **React, TypeScript, and Puter.js**, this app allows users to upload resumes, receive intelligent suggestions, and manage their data — all without a traditional backend.
+ ---
+ 
 🔗 https://resume-lyzerai.vercel.app/
----
+
 
 ## 🚀 Features
 
